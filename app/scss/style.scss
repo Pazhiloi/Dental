@@ -4,7 +4,36 @@
 @import 'libs';
 @import 'global';
 
-
+.header{
+  &__inner{
+    padding: 22px 0 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__list{
+    display: flex;
+    align-items: center;
+  }
+  &__item:not(:first-child){
+    margin-left: 14px;
+  }
+}
+.menu{
+  &__list{
+    display: flex;
+    align-items: center;
+  }
+  &__item:not(:first-child){
+    margin-left: 32px;
+  }
+  &__link{
+    @extend %manrope-700;
+    font-size: 14px;
+    line-height: 20px;
+    color: $title;
+  }
+}
 
 
 @import 'media';

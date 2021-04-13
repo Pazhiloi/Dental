@@ -3,8 +3,11 @@ body{
   height: 100%;
 }
 body{
+  @extend %manrope-400;
   display: flex;
   flex-direction: column;
+  font-size: 16px;
+  line-height: 26px;
   color: $default;
   background-color: $bg;
 }
@@ -15,14 +18,15 @@ img{
   object-fit: cover;
 }
 .container{
-  max-width: 1270px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .title{
-  font-size: 30px;
-  line-height: 30px;
+  @extend %manrope-800;
+  font-size: 36px;
+  line-height: 64px;
   color: $title;
 }
 
