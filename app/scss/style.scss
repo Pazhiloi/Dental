@@ -256,6 +256,7 @@
   &__items{
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    grid-gap: 84px 26px;
     padding-bottom: 33px;
   }
   &__item{
@@ -500,6 +501,24 @@
   &__item-text{
     font-size: 12px;
     line-height: 16px;
+  }
+}
+.doctors{
+  padding: 57px 0;
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__content{
+    margin-left: 55px;
+  }
+  &__title{
+    @extend %manrope-800;
+    font-size: 30px;
+    line-height: 64px;
+    color: #000;
+    margin-bottom: 20px;
   }
 }
 .footer{
