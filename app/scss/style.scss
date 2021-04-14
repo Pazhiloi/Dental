@@ -432,6 +432,76 @@
     color: #666;
   }
 }
+.about{
+  padding: 66px 0 72px;  
+  &__info,
+  &__history{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 85px;
+  }
+  &__image{
+    background-color: transparent;
+  }
+  &__content-title,
+  &__subtitle,
+  &__title,
+  &__wrapper-title{
+    line-height: 64px;
+    margin-bottom: 20px;
+  }
+  &__content-title{
+    @extend %manrope-800;
+    font-size: 30px;
+  }
+  &__subtitle{
+    @extend %manrope-700;
+    font-size: 48px;
+  }
+  &__title{
+    @extend %manrope-700;
+  }
+  &__img{
+    width: 571px;
+    height: 519px;
+    margin-left: 30px;
+  }
+  &__wrapper-title,
+  &__subtext{
+    text-align: center;
+  }
+  &__subtext{
+    @extend %helvetica-400;
+    color: #000;
+    margin: 0 auto 70px;
+    width: 650px;
+    min-height: 48px;
+  }
+  &__subtext,
+  &__item-title{
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 48px;
+  }
+  &__item{
+    width: 253px;
+    min-height: 98px;
+  }
+  &__item-title{
+    @extend %helvetica-700;
+    margin-bottom: 10px;
+    color: $accent;
+  }
+  &__item-text{
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
 .footer{
   &__inner{
     background-color: $accent;
