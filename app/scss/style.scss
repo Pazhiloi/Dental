@@ -34,6 +34,22 @@
     color: $title;
   }
 }
+.top{
+  &__inner{
+    background-color: $accent;
+    min-height: 148px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title{
+    @extend %helvetica-700;
+    font-size: 29px;
+    line-height: 33px;
+    color: #fff;
+    margin-bottom: 11px;
+  }
+}
 .footer{
   &__inner{
     background-color: $accent;

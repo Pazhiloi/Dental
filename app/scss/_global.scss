@@ -32,4 +32,35 @@ img{
 a {
   font-style: normal;
 }
+.breadcrumbs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  &__list{
+    display: flex;
+  }
+  &__item{
+    @extend %helvetica-400;
+    color: #222;
+    padding-right: 20px;
+    position: relative;
+    &::after{
+      content: '/';
+      position: absolute;
+      font-size: 19px;
+      right: 8px;
+      top: 1px;
+    }
+    &:last-child{
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    color: inherit;
+  }
+}
 
