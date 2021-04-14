@@ -34,6 +34,82 @@
     color: $title;
   }
 }
+.footer{
+  &__inner{
+    background-color: $accent;
+    min-height: 288px;
+    padding: 38px 38px;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo{
+    margin-bottom: 37px;
+  }
+  &__address{
+    font-style: normal;
+  }
+  &__title,
+  &__text,
+  &__address-title,
+  &__detail,
+  &__button,
+  &__link{
+    color: #fff;
+  }
+  &__title{
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 18px;
+  }
+  &__text,
+  &__address-title{
+    font-size: 14px;
+    line-height: 19px;
+  }
+  &__text{
+    width: 309px;
+  }
+  &__box:not(:last-child){
+    margin-bottom: 19px;
+  }
+  &__address-title{
+    margin-bottom: 2px;
+  }
+  &__detail,
+  &__link{
+    font-size: 12px;
+    line-height: 16px;
+  }
+  &__link{
+    margin-left: 12px;
+  }
+  &__text--width{
+    width: 189px;
+    margin-bottom: 10px;
+  }
+  &__form{
+    width: 188px;
+    height: 27px;
+    display: flex;
+  }
+  &__input{
+    @extend %input-mini;
+    padding-right: 75px;
+  }
+  &__button{
+    @extend %rubik-500;
+    @extend %btn;
+    margin-top: 1px;
+    margin-left: -66px;
+    width: 65px;
+    height: 25px;
+    font-size: 10px;
+    line-height: 12px;
+    border: 1px solid #fff;
+  }
+}
 
 
 @import 'media';
