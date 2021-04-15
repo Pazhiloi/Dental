@@ -63,4 +63,35 @@ a {
     color: inherit;
   }
 }
+.pagination{
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 0;
+  .pagination__list{
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+  }
+  &__item{
+    width: 46px;
+    height: 46px;
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6;
+  }
+  &__item--active{
+    background-color: $accent;
+  }
+  &__link{
+    @extend %roboto-500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #bbb;
+  }
+  &__link--active{
+    color: #fff;
+  }
+}
 
