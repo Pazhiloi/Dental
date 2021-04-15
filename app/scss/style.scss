@@ -521,6 +521,39 @@
     margin-bottom: 20px;
   }
 }
+.blog-detail{
+  padding: 50px 0 80px;
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__image{
+    width: 501px;
+    height: 342px;
+  }
+  &__content{
+    margin-left: 26px;
+  }
+  &__title{
+    @extend %manrope-700;
+    font-size: 26px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  &__text{
+    font-size: 14px;
+    line-height: 21px;
+    color: #666;
+  }
+  &__text:not(:last-child){
+    margin-bottom: 20px;
+  }
+  &__link{
+    @extend %manrope-700;
+    color: $accent;
+  }
+}
 .footer{
   &__inner{
     background-color: $accent;
