@@ -36,6 +36,13 @@
     line-height: 20px;
     color: $title;
   }
+  &__btn{
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    display: none;
+  }
 }
 .top{
   &__inner{
@@ -71,7 +78,8 @@
     color: $accent;
   }
   &__title{
-    width: 540px;
+    max-width: 540px;
+    width: 100%;
     @extend %manrope-800;
     font-size: 40px;
     line-height: 42px;
@@ -96,11 +104,11 @@
       position: absolute;
       left: 100px;
       top: -360px;
-      width: 740px;
+      background-image: url('../images/content/circle.jpg');
+      background-repeat: no-repeat;
+      max-width: 740px;
+      width: 100%;
       height: 740px;
-      border-radius: 50%;
-      background-color: $accent;
-      overflow: hidden;
     }
   }
   &__image{
@@ -184,11 +192,13 @@
 .services{
   padding-bottom: 75px;
   &__title{
-    @extend %manrope-800;
     margin-bottom: 10px;
+    text-align: center;
   }
   &__subtitle{
+    @extend %manrope-400;
     margin-bottom: 80px;
+    text-align: center;
   }
   &__items{
     display: grid;
@@ -197,7 +207,8 @@
     margin-bottom: 80px;
   }
   &__item{
-    width: 286px;
+    max-width: 286px;
+    width: 100%;
     min-height: 178px;
   }
   &__item-title{
@@ -260,10 +271,12 @@
     padding-bottom: 33px;
   }
   &__item{
-    width: 237px;
+    max-width: 237px;
+    width: 100%;
   }
   &__image{
-    width: 237px;
+    max-width: 237px;
+    width: 100%;
     height: 338px;
   }
   &__name,
@@ -311,12 +324,14 @@
     padding-bottom: 62px;
   }
   &__items{
+    margin-top: -60px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 50px;
   }
   &__item{
-    width: 350px;
+    max-width: 350px;
+    width: 100%;
     min-height: 337px;
   }
 
@@ -325,10 +340,31 @@
     font-size: 24px;
     line-height: 32px;
     margin: 0 auto 5px;
-    width: 270px;
+    max-width: 270px;
+    width: 100%;
+  }
+  &__item-box{
+    padding: 33px 0 23px;
+    max-width: 350px;
+    width: 100%;
+    min-height: 192px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 29px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      right: 155px;
+      border: 20px solid transparent;
+      border-top: 20px solid #fff;
+      width: 24px;
+      height: 15px;
+    }
   }
   &__text{
-    margin: 0 auto 50px;
+    margin: 0 auto;
     width: 270px;
   }
   &__image{
@@ -348,6 +384,41 @@
     font-size: 14px;
     line-height: 24px;
   }
+  &__labels{
+    display: flex;
+    align-items: center;
+    margin: 1px auto 0;
+    max-width: 60px;
+    width: 100%;
+  }
+  &__label:not(:first-child){
+    margin-left: 10px;
+  }
+  &__checkbox{
+    width: 8px;
+    height: 8px;
+    background-color: $accent;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &__input{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+    &:checked + .clients__checkbox{
+      background-color: #fff;
+      width: 14px;
+      height: 14px;
+      border: 3px solid $accent;
+    }
+  }
+  &__item--one,
+  &__item--two,
+  &__item--three{
+    margin-top: 40px;
+  }
 }
 .blog{
   padding: 10px 0 75px;
@@ -359,7 +430,8 @@
     text-align: center;
   }
   &__subtitle{
-    width: 540px;
+    max-width: 540px;
+    width: 100%;
     margin: 0 auto;
     font-size: 18px;
     margin-bottom: 40px;
@@ -370,10 +442,12 @@
     grid-gap: 50px;
   }
   &__item{
-    width: 356px;
+    max-width: 356px;
+    width: 100%;
   }
   &__image{
-    width: 356px;
+    max-width: 356px;
+    width: 100%;
     height: 197px;
     margin-bottom: 7px;
   }
@@ -464,7 +538,8 @@
     @extend %manrope-700;
   }
   &__img{
-    width: 571px;
+    max-width: 571px;
+    width: 100%;
     height: 519px;
     margin-left: 30px;
   }
@@ -476,7 +551,8 @@
     @extend %helvetica-400;
     color: #000;
     margin: 0 auto 70px;
-    width: 650px;
+    max-width: 650px;
+    width: 100%;
     min-height: 48px;
   }
   &__subtext,
@@ -490,7 +566,8 @@
     grid-gap: 48px;
   }
   &__item{
-    width: 253px;
+    max-width: 253px;
+    width: 100%;
     min-height: 98px;
   }
   &__item-title{
@@ -529,7 +606,8 @@
     align-items: center;
   }
   &__image{
-    width: 501px;
+    max-width: 501px;
+    width: 100%;
     height: 342px;
   }
   &__content{
@@ -554,6 +632,116 @@
     color: $accent;
   }
 }
+.contact{
+  padding: 64px 0 90px;
+  &__items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 80px;
+  }
+  &__item{
+    width: 210px;
+    min-height: 121px;
+  }
+  &__img{
+    margin: 0 auto 15px;
+  }
+  &__email,
+  &__tel,
+  &__item-title,
+  &__time,
+  &__address{
+    text-align: center;
+  }
+  &__item-title{
+    @extend %roboto-500;
+    font-size: 24px;
+    line-height: 35px;
+    margin-bottom: 15px;
+    color: #000;
+  }
+  &__address{
+    width: 170px;
+  }
+  &__address-link{
+    @extend %roboto-700;
+    color: #faad3d;
+  }
+  &__email,
+  &__tel,
+  &__time,
+  &__address{
+    @extend %roboto-400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #666;
+    margin: 0 auto;
+  }
+  &__time{
+    max-width: 210px;
+    width: 100%;
+  }
+  &__email,
+  &__tel{
+    display: block;
+    max-width: 182px;
+    width: 100%;
+  }
+  &__title{
+    padding-top: 80px;
+    @extend %manrope-700;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  &__form{
+    max-width: 840px;
+    width: 100%;
+  }
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__name{
+    @extend %roboto-500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #666;
+    margin-bottom: 13px;
+  }
+  &__input{
+    @extend %input;
+    margin-bottom: 30px;
+  }
+  &__input--big{
+    @extend %input;
+    max-width: 840px;
+  }
+  &__textarea{
+    @extend %textarea;
+    margin-bottom: 30px;
+  }
+  &__button{
+    @extend %btn;
+    @extend %roboto-500;
+    width: 173px;
+    height: 48px;
+    line-height: 19px;
+    color: #fff;
+    border-radius: 5px;
+  }
+  &__form,
+  &__button{
+    margin: 0 auto;
+  }
+}
+#map{
+  max-width: 1169px;
+  width: 100%;
+  height: 500px;
+}
 .footer{
   &__inner{
     background-color: $accent;
@@ -561,8 +749,9 @@
     padding: 38px 38px;
   }
   &__items{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 100px;
   }
   &__logo{
     margin-bottom: 37px;
@@ -589,7 +778,8 @@
     line-height: 19px;
   }
   &__text{
-    width: 309px;
+    max-width: 309px;
+    width: 100%;
   }
   &__box:not(:last-child){
     margin-bottom: 19px;
@@ -629,6 +819,13 @@
     line-height: 12px;
     border: 1px solid #fff;
   }
+}
+.gm-style-cc {
+  display: none !important;
+}
+
+.gm-style a[href^="https://maps.google.com/maps"] {
+  display: none !important;
 }
 
 

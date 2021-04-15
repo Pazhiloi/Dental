@@ -1,0 +1,296 @@
+@media(max-width: 1400px){
+  .info{
+    &__img-box{
+      &::after{
+        display: none;
+      }
+    }
+  }
+}
+@media(max-width: 1250px){
+  .info{
+    &__top{
+      display: block;
+    }
+    &__content{
+      max-width: 540px;
+      width: 100%;
+    }
+    &__image,
+    &__content{
+      margin: 0 auto;
+    }
+  }
+  .preferences{
+    &__items{
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+    &__item{
+      margin: 0 auto;
+    }
+    &__info{
+      display: block;
+    }
+  }
+  .services{
+    &__items{
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 85px 0;
+    }
+    &__item{
+      margin: 0 auto;
+    }
+  }
+  .specialist{
+    &__items{
+      grid-template-columns: repeat(2,1fr);
+    }
+    &__item{
+      margin: 0 auto;
+    }
+  }
+  .clients{
+    &__items{
+     grid-gap: 5px;
+    }
+  }
+  .blog{
+    &__items{
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 25px;
+    }
+    &__item{
+      margin: 0 auto;
+    }
+  }
+  .about{
+    &__img{
+      margin-left: 0;
+    }
+    &__items{
+      grid-gap: 10px;
+    }
+  }
+  .footer{
+    &__items{
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 50px;
+    }
+  }
+}
+@media(max-width: 900px){
+  .clients{
+    &__labels{
+      display: none;
+    }
+    &__items{
+      grid-template-columns: repeat(1,1fr);
+      grid-gap: 10px;
+    }
+    &__item{
+      margin: 0 auto;
+    }
+  }
+  .about{
+    &__info,
+    &__history{
+      display: block;
+    }
+    &__img{
+      margin: 0 auto;
+    }
+    &__subtitle,
+    &__title{
+      font-size: 25px;
+    }
+    &__items{
+      grid-template-columns: repeat(2,1fr);
+    }
+    &__item{
+      margin: 0 auto;
+    }
+  }
+  .doctors{
+    &__info{
+      display: block;
+    }
+    &__image{
+      margin: 0 auto;
+    }
+  }
+  .blog-detail{
+    &__info{
+      display: block;
+    }
+    &__image{
+      margin: 0 auto 20px;
+    }
+  }
+  .contact{
+    &__box{
+      display: block;
+    }
+    &__input{
+      max-width: 100%;
+    }
+  }
+  #map{
+    max-width: 80%;
+    height: 400px;
+    margin: 0 auto;
+  }
+}
+@media(max-width: 640px){
+  .header{
+    &__list{
+      display: none;
+    }
+  }
+  .info{
+    &__content{
+      margin-bottom: 10px;
+    }
+    &__title{
+      font-size: 25px;
+    }
+    &__image{
+      width: 300px;
+      height: 240px;
+    }
+    &__phone{
+      font-size: 20px;
+    }
+  }
+  .preferences{
+    &__items{
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+  .services{
+    &__items{
+      grid-template-columns: repeat(1,1fr);
+      grid-gap: 20px;
+    }
+  }
+  .specialist{
+    &__items{
+      grid-template-columns: repeat(1,1fr);
+    }
+    &__title{
+      font-size: 25px;
+    }
+  }
+  .clients{
+    &__title{
+      font-size: 25px;
+    }
+  }
+  .blog{
+    &__items{
+      grid-template-columns: repeat(1,1fr);
+    }
+    &__title{
+      font-size: 25px;
+    }
+  }
+  .about{
+    &__wrapper-title{
+      font-size: 25px;
+    }
+  }
+  .blog-detail{
+    &__image{
+      height: 280px;
+    }
+  }
+  .contact{
+    &__items{
+      display: block;
+    }
+    &__item{
+      margin: 0 auto 20px;
+    }
+    &__title{
+      font-size: 25px;
+    }
+  }
+  #map{
+    height: 300px;
+  }
+  .footer{
+    &__items{
+      grid-template-columns: repeat(1,1fr);
+      grid-gap: 25px;
+    }
+  }
+}
+@media(max-width: 480px){
+  .info{
+    &__image{
+      width: 280px;
+      height: 200px;
+    }
+    &__phone{
+      font-size: 12px;
+    }
+  }
+  .about{
+    &__img{
+      height: 280px;
+    }
+    &__items{
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+  .menu{
+    &__list{
+      transform: translateY(-200%);
+      position: absolute;
+      top: 100px;
+      width: 100%;
+      left: 0;
+      flex-direction: column;
+      align-items: center;
+      z-index: 5;
+      transition: transform 0.5s ease;
+      background-color: #b4b4b4;
+      &.menu__list--active{
+        transform: translateY(0);
+        transition: transform 0.5s ease;
+      }
+    }
+     &__item + .menu__item{
+        margin-left: 0;
+      }
+      &__item{
+      width: 100%;
+      padding: 0 15px;
+      text-align: center;
+     }
+     &__item:not(:last-child){
+       margin-bottom: 10px;
+     }
+    &__link{
+      padding: 5px 0;
+      display: block;
+     }
+      &__btn{
+      display: block;
+    }
+  }
+  .blog-detail{
+    &__image{
+      height: 200px;
+    }
+  }
+  .pagination{
+    justify-content: center;
+    &__list{
+      padding: 0 10px;
+    }
+  }
+   #map{
+    height: 200px;
+  }
+}
